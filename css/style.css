@@ -582,3 +582,10 @@ html.js.leaving main, html.js.leaving .footer { opacity: 0; transform: translate
 @media (min-width: 640px) { .dir-grid { grid-template-columns: repeat(4, 1fr); gap: 14px; } .dir-grid .store .meta b { font-size: 14.5px; } .dir-grid .store .meta small { font-size: 12.5px; } }
 @media (min-width: 1024px) { .dir-grid { grid-template-columns: repeat(6, 1fr); gap: 18px; } }
 @media (min-width: 1600px) { .dir-grid { grid-template-columns: repeat(8, 1fr); } }
+/* Logo containment: images are absolutely fitted inside their box so no logo can ever overflow, whatever its shape */
+.store .logo-tile, .play .logo-tile, .brands-track a, .result .lg, .sheet .s-logo { position: relative; overflow: hidden; }
+.store .logo-tile img, .play .logo-tile img, .brands-track a img, .result .lg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.sheet .s-logo { height: 168px; display: block; border-radius: var(--r-md); }
+.sheet .s-logo img { position: absolute; top: 12px; bottom: 12px; left: 50%; transform: translateX(-50%); height: calc(100% - 24px); width: auto; max-width: calc(100% - 24px); aspect-ratio: auto; object-fit: contain; border-radius: 10px; }
+.sheet .s-logo .no-logo { position: absolute; inset: 0; }
+.sheet .close { z-index: 3; background: rgba(255,255,255,.9); }
