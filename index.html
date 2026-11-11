@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Greenstone Shopping Centre | Real retail, real life in Edenvale</title>
+<meta name="description" content="Greenstone Shopping Centre in Edenvale: over 150 stores, restaurants and family entertainment, anchored by Checkers, Pick n Pay Hyper and Woolworths. Trading hours, store directory and what's on.">
+<meta name="theme-color" content="#FFFDE9">
+<link rel="icon" href="assets/brand/greenstone-logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("ready")},1500)</script>
+</head>
+<body data-page="home">
+
+<main>
+  <!-- HERO ---------------------------------------------------------------->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-media">
+        <picture>
+          <img src="assets/img/hero-atrium.jpg" alt="Inside Greenstone Shopping Centre's double-volume atrium" fetchpriority="high" style="object-position:50% 45%">
+        </picture>
+        <div class="hero-copy">
+          <h1 class="h-display">Real retail. Real&nbsp;life.</h1>
+          <div class="side">
+            <p class="lead">Over 150 stores, restaurants and family entertainment in Edenvale, anchored by Checkers, Pick n Pay Hyper and Woolworths.</p>
+            <div class="hero-search">
+              <label class="search-field">
+                <i data-i="search"></i>
+                <input type="search" placeholder="Search for a store" data-store-search autocomplete="off" aria-label="Search stores">
+                <button class="btn btn-red" type="button" data-search-go>Search</button>
+              </label>
+              <div class="results" role="listbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <a href="#visit"><small>Trading today</small><b data-status>Open until 19:00 today</b></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Greenstone+Shopping+Centre+Edenvale" target="_blank" rel="noopener"><small>Find us</small><b>Van Riebeeck &amp; Modderfontein Rd</b></a>
+        <a href="#amenities"><small>Free WiFi</small><b>180 minutes on us</b></a>
+        <a href="tel:+27115240445"><small>Centre management</small><b>011 524 0445</b></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTENT TILES -------------------------------------------------------->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="h-1">What are you here for?</h2>
+        <a class="link-arrow" href="stores.html">All stores <i data-i="arrow"></i></a>
+      </div>
+      <div class="tiles">
+        <a class="tile reveal" href="stores.html?cat=Fashion%20%26%20Accessories">
+          <div class="img"><img src="assets/img/lifestyle-fashion.jpg" alt="" loading="lazy"></div>
+          <div class="body"><h3 class="h-3">Shop for clothes</h3><span class="count" data-count="Fashion & Accessories"></span></div>
+        </a>
+        <a class="tile reveal" href="stores.html?cat=Food%20%26%20Drink">
+          <div class="img"><img src="assets/img/lifestyle-food.jpg" alt="" loading="lazy"></div>
+          <div class="body"><h3 class="h-3">Eat something</h3><span class="count" data-count="Food & Drink"></span></div>
+        </a>
+        <a class="tile reveal" href="stores.html?cat=Health%20%26%20Beauty">
+          <div class="img"><img src="assets/img/lifestyle-grooming.jpg" alt="" loading="lazy"></div>
+          <div class="body"><h3 class="h-3">Health &amp; beauty</h3><span class="count" data-count="Health & Beauty"></span></div>
+        </a>
+        <a class="tile reveal" href="stores.html?cat=Department%20%26%20Grocery">
+          <div class="img"><img src="assets/img/checkers-fresh.jpg" alt="" loading="lazy" style="object-position:0% 50%"></div>
+          <div class="body"><h3 class="h-3">Groceries</h3><span class="count" data-count="Department & Grocery"></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S ON ----------------------------------------------------------->
+  <section class="section" id="whats-on">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="h-1">What's on at Greenstone</h2>
+        <div class="rail-nav">
+          <button class="icon-btn" data-rail="-1" aria-label="Previous"><i data-i="arrowL"></i></button>
+          <button class="icon-btn" data-rail="1" aria-label="Next"><i data-i="arrow"></i></button>
+        </div>
+      </div>
+      <div class="rail" id="eventsRail"></div>
+    </div>
+  </section>
+
+  <!-- ENTERTAINMENT ------------------------------------------------------->
+  <section class="section" id="play">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><h2 class="h-1">More than shopping</h2><p class="lead">Karting, trampolines, padel, bingo and a full gym, all under one roof.</p></div>
+        <a class="link-arrow" href="stores.html?cat=Entertainment%20%26%20Fitness">See all <i data-i="arrow"></i></a>
+      </div>
+      <div class="play-grid" id="playGrid"></div>
+    </div>
+  </section>
+
+  <!-- BRANDS -------------------------------------------------------------->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="h-1">Your favourite brands,<br>all under one roof</h2>
+        <a class="link-arrow" href="stores.html">Browse A–Z <i data-i="arrow"></i></a>
+      </div>
+      <div class="brands reveal">
+        <div class="brands-track" id="brandsA"></div>
+        <div class="brands-track rev" id="brandsB"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANCHORS ------------------------------------------------------------->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="h-1">Anchored by the names you trust</h2>
+        <a class="link-arrow" href="stores.html?cat=Department%20%26%20Grocery">Groceries &amp; department stores <i data-i="arrow"></i></a>
+      </div>
+      <div class="store-grid" id="featured"></div>
+    </div>
+  </section>
+
+  <!-- STORY + STATS ------------------------------------------------------->
+  <section class="section">
+    <div class="wrap">
+      <div class="story">
+        <div class="story-media reveal"><img src="assets/img/interior-walkway.jpg" alt="Upper level walkway at Greenstone Shopping Centre" loading="lazy"></div>
+        <div class="story-copy reveal">
+          <h2 class="h-1">Everything under one roof in Edenvale</h2>
+          <p>Greenstone is conveniently situated on Modderfontein Road in Edenvale. A diverse mix of over 150 stores and restaurants offers shopping, dining and fun for the whole family.</p>
+          <p>From fashion, health &amp; beauty and tech to home décor and well-known names like Cotton On, Mr Price, Dis-Chem, The Crazy Store and Clicks. Plus free WiFi and ample parking.</p>
+          <div><a class="btn btn-ink" href="#visit">Plan your visit</a></div>
+        </div>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><div class="n">750k+</div><div class="l">Shoppers every month</div></div>
+        <div class="stat"><div class="n" data-total>153</div><div class="l">Stores, restaurants &amp; services</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">Levels of shopping</div></div>
+        <div class="stat"><div class="n">180</div><div class="l">Minutes of free WiFi</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT --------------------------------------------------------------->
+  <section class="section" id="visit">
+    <div class="wrap">
+      <div class="visit">
+        <div class="visit-hero reveal">
+          <img src="assets/img/interior-levels.jpg" alt="Both levels of Greenstone Shopping Centre" loading="lazy">
+          <h2 class="h-1">Easy to find,<br>easy to park</h2>
+          <p>On the corner of Van Riebeeck and Modderfontein Road in Greenstone Hill, with ample parking and free WiFi inside.</p>
+          <div class="btns">
+            <a class="btn btn-white" href="https://www.google.com/maps/dir/?api=1&destination=Greenstone+Shopping+Centre+Edenvale" target="_blank" rel="noopener"><i data-i="nav"></i>Get directions</a>
+            <a class="btn btn-ghost-w" href="tel:+27115240445"><i data-i="phone"></i>011 524 0445</a>
+          </div>
+        </div>
+        <div class="visit-card reveal">
+          <h3 class="h-2">Trading hours</h3>
+          <table class="hours" id="hoursTable">
+            <tr data-days="1,2,3,4,5"><td>Monday – Friday</td><td>09:00 – 19:00</td></tr>
+            <tr data-days="6"><td>Saturday</td><td>09:00 – 18:00</td></tr>
+            <tr data-days="0"><td>Sunday</td><td>09:00 – 17:00</td></tr>
+            <tr><td>Public holidays</td><td>09:00 – 17:00</td></tr>
+          </table>
+          <p class="hours-note">Restaurants, entertainment and the big grocers trade longer; banks trade shorter. Each store's hours are in the <a href="stores.html" style="text-decoration:underline">store directory</a>.</p>
+          <div class="addr"><b>Greenstone Shopping Centre</b><span>Cnr Van Riebeeck &amp; Modderfontein Rd, Greenstone Hill, Edenvale, 1609</span></div>
+        </div>
+        <div class="map reveal">
+          <iframe title="Map of Greenstone Shopping Centre" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Greenstone+Shopping+Centre,+Edenvale&amp;output=embed"></iframe>
+        </div>
+      </div>
+
+      <div class="amenities reveal" id="amenities">
+        <div class="amenity"><i data-i="car"></i>Ample parking</div>
+        <div class="amenity"><i data-i="wifi"></i>180 min free WiFi</div>
+        <div class="amenity"><i data-i="recycle"></i>Recycling drop-off</div>
+        <div class="amenity"><i data-i="wash"></i>Cream Car Wash</div>
+        <div class="amenity"><i data-i="bank"></i>7 banks &amp; ATMs</div>
+        <div class="amenity"><i data-i="post"></i>Post Office</div>
+        <div class="amenity"><i data-i="food"></i>20 restaurants &amp; cafés</div>
+        <div class="amenity"><i data-i="kids"></i>Kids' entertainment</div>
+        <div class="amenity"><i data-i="gym"></i>Planet Fitness gym</div>
+        <div class="amenity"><i data-i="spark"></i>Padel &amp; pickleball</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECYCLE ------------------------------------------------------------->
+  <section class="section" id="recycle">
+    <div class="wrap">
+      <div class="recycle reveal">
+        <img src="assets/img/recycling.jpg" alt="Sorted recycling: paper, plastic, glass and cans" loading="lazy">
+        <div>
+          <h2 class="h-1">Reduce, reuse, recycle</h2>
+          <p>Looking for a drop-off point? Separate recycling bins are at <b>entrances 2, 4, 5 &amp; 7</b>. Bring your sorted paper, plastic, glass and cans any time we're open. Please rinse food packaging and remove lids.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS ------------------------------------------------------------>
+  <section class="section" id="business">
+    <div class="wrap">
+      <div class="sec-head reveal"><h2 class="h-1">Grow your brand at Greenstone</h2></div>
+      <div class="biz">
+        <div class="biz-card lease reveal">
+          <h3 class="h-2">Leasing</h3>
+          <p>Join over 150 brands in front of more than 750 000 shoppers a month. Talk to us about available space.</p>
+          <div class="contact">
+            <a class="btn btn-white" href="mailto:nclifford@broll.com"><i data-i="mail"></i>Leasing enquiry</a>
+            <a class="btn btn-ghost-w" href="tel:+27115240445"><i data-i="phone"></i>Call</a>
+          </div>
+        </div>
+        <div class="biz-card expo reveal">
+          <h3 class="h-2">Exhibitions</h3>
+          <p>15 exhibition areas throughout the centre. Put your product in front of shoppers with a "ready to shop" mindset.</p>
+          <div class="contact">
+            <a class="btn btn-ink" href="mailto:katlego@emergemarketing.co.za"><i data-i="mail"></i>Book a space</a>
+            <a class="btn btn-line" href="assets/docs/exhibitions-brochure-2026.pdf" target="_blank" rel="noopener">2026 info pack (PDF)</a>
+          </div>
+        </div>
+      </div>
+      <div class="team reveal">
+        <h3 class="h-3">Centre management</h3>
+        <div class="team-grid">
+          <a href="mailto:tscott@broll.com"><small>General Manager</small><b>Tiffiny Scott</b><span>tscott@broll.com</span></a>
+          <a href="mailto:rmashinini@broll.com"><small>Operations Manager</small><b>Richard Mashinini</b><span>rmashinini@broll.com</span></a>
+          <a href="mailto:delta@emergemarketing.co.za"><small>Marketing Manager</small><b>Delta Bellagarda</b><span>delta@emergemarketing.co.za</span></a>
+          <a href="mailto:katlego@emergemarketing.co.za"><small>Sales Manager</small><b>Katlego Maseloane</b><span>katlego@emergemarketing.co.za</span></a>
+          <a href="mailto:nclifford@broll.com"><small>Senior Lease Administrator</small><b>Natasha Clifford</b><span>nclifford@broll.com</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ----------------------------------------------------------------->
+  <section class="section" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="reveal" style="display:flex;flex-direction:column;gap:14px">
+        <h2 class="h-1">Good to know</h2>
+        <p class="lead">Can't find what you're looking for? Call centre management on <a href="tel:+27115240445" style="color:var(--ink);font-weight:600">011 524 0445</a>.</p>
+      </div>
+      <div class="faq reveal">
+        <details open><summary>What are your trading hours?<i data-i="plus"></i></summary><p>Monday to Friday 09:00 – 19:00, Saturday 09:00 – 18:00, and Sunday and public holidays 09:00 – 17:00. Some stores trade longer or shorter, and each store's hours are in the store directory.</p></details>
+        <details><summary>How do I find a store?<i data-i="plus"></i></summary><p>Use the store search. Every listing shows the shop number and level: numbers starting with U are on the upper level, and numbers starting with L are on the lower level.</p></details>
+        <details><summary>Is there free WiFi?<i data-i="plus"></i></summary><p>Yes. Every visitor gets 180 minutes of free WiFi throughout the centre.</p></details>
+        <details><summary>Where can I drop off recycling?<i data-i="plus"></i></summary><p>Separate recycling bins are at entrances 2, 4, 5 and 7 for paper, plastic, glass and cans. Please rinse packaging and remove lids.</p></details>
+        <details><summary>How do I book padel or pickleball?<i data-i="plus"></i></summary><p>Courts at Padel365 are open daily from 06:00 to 23:00 and can be booked online through <a href="https://playtomic.com/clubs/padel-365-greenstone" target="_blank" rel="noopener" style="text-decoration:underline">Playtomic</a>.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/data.js"></script>
+<script>
+/* What's on: sample content for the mockup (mix of real info + placeholders) */
+window.GA_EVENTS = [
+  { tag: 'Padel365', title: 'Indoor padel & pickleball', date: 'Open daily 06:00 – 23:00', text: 'Grab a racket and book a court at Padel365 on the lower level.', img: 'assets/img/padel.jpg', href: 'https://playtomic.com/clubs/padel-365-greenstone' },
+  { tag: 'News', title: 'Real shopping. New hours.', date: 'Now trading', text: 'More time to shop: open until 19:00 on weekdays and 18:00 on Saturdays.', img: 'assets/img/interior-walkway.jpg', href: '#visit' },
+  { tag: 'Fashion', title: 'New season, new looks', date: 'Upper & lower level', text: 'Over 40 fashion and accessory stores, from Edgars and Cotton On to Sportscene.', img: 'assets/img/lifestyle-mens.jpg', href: 'stores.html?cat=Fashion%20%26%20Accessories' },
+  { tag: 'Festive season', title: 'Your one-stop festive shop', date: 'December', text: 'Gifts, décor and treats from over 150 stores, all under one roof.', img: 'assets/img/interior-levels.jpg', href: '#' },
+  { tag: 'Community', title: 'Recycle at Greenstone', date: 'Entrances 2, 4, 5 & 7', text: 'Drop off sorted paper, plastic, glass and cans whenever we are open.', img: 'assets/img/recycling.jpg', href: '#recycle' },
+];
+</script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  const S = window.GA_STORES, I = window.GA_ICON, st = window.GA_STATUS();
+  const by = n => S.find(s => s.name === n);
+  const pick = names => names.map(by).filter(Boolean);
+  const logo = s => s.logo ? `<img src="${s.logo}" alt="${s.name}" loading="lazy">` : `<span class="no-logo">${s.name}</span>`;
+  const where = s => /^ent/i.test(s.shop) ? 'Entrance ' + s.shop.replace(/\D/g, '') + ', parking' : [s.level, s.shop].filter(Boolean).join(' · ');
+  document.querySelectorAll('[data-count]').forEach(el => { el.textContent = S.filter(s => s.cat === el.dataset.count).length + ' stores'; });
+  document.querySelectorAll('[data-total]').forEach(el => el.textContent = S.length);
+
+  // events
+  const rail = document.getElementById('eventsRail');
+  rail.innerHTML = GA_EVENTS.map(e => `
+    <a class="event" href="${e.href}"${/^http/.test(e.href) ? ' target="_blank" rel="noopener"' : ''}>
+      <div class="img"><img src="${e.img}" alt="" loading="lazy"></div>
+      <span class="kicker"><b>${e.tag}</b> · ${e.date}</span>
+      <h3 class="h-3">${e.title}</h3>
+      <p>${e.text}</p>
+    </a>`).join('');
+  document.querySelectorAll('[data-rail]').forEach(b => b.addEventListener('click', () => { const c = rail.firstElementChild, gap = parseFloat(getComputedStyle(rail).columnGap) || 0; rail.scrollBy({ left: +b.dataset.rail * (c.offsetWidth + gap), behavior: 'smooth' }); }));
+
+  // entertainment
+  const play = [
+    ['Rush Trampoline Park', 'A trampoline park for kids and grown-ups.'],
+    ['Supreme Karting', 'Indoor go-karting right here at Greenstone.'],
+    ['Padel365', 'Book padel and pickleball courts online.'],
+    ['The Fun Company', 'Arcade games and family fun.'],
+    ['Galaxy Bingo', 'Bingo and gaming, open late.'],
+    ['Planet Fitness', 'Full gym, open from 05:00 on weekdays.'],
+  ];
+  document.getElementById('playGrid').innerHTML = play.map(([n, d]) => { const s = by(n); if (!s) return '';
+    const h = (s.hours || '').split(';')[0];
+    return `<a class="play reveal in" href="stores.html?store=${s.id}">
+      <div class="logo-tile">${logo(s)}</div>
+      <div><b>${s.name}</b><p>${d}</p><small>${h ? h + ' · ' : ''}${where(s)}</small></div>
+    </a>`; }).join('');
+
+  // brand marquee: two rows, opposite directions
+  const rowA = pick(['Checkers','Woolworths','Pick n Pay Hyper','Edgars','Dis-Chem','Clicks','Cotton On','Mr Price','Foschini','Truworths','Sportscene','Cape Union Mart','Pandora','Skechers','Typo','The Body Shop','Exclusive Books','Incredible Connection']);
+  const rowB = pick(['Spur','Doppio Zero',"John Dory's",'Mugg & Bean','Kauai','Krispy Kreme','Panarottis','Vida e Café','KFC','Steers','Mr Price Home','Sheet Street','@Home','Toys R Us','The Crazy Store','PEP','Jet','Factorie']);
+  const tiles = list => list.map(b => `<a href="stores.html?store=${b.id}" aria-label="${b.name}">${logo(b)}</a>`).join('');
+  const dup = html => html + html.replace(/aria-label="/g, 'aria-hidden="true" tabindex="-1" data-x="');
+  document.getElementById('brandsA').innerHTML = dup(tiles(rowA));
+  document.getElementById('brandsB').innerHTML = dup(tiles(rowB));
+
+  // anchors
+  document.getElementById('featured').innerHTML = pick(['Checkers','Pick n Pay Hyper','Woolworths','Edgars']).map(s => `
+    <a class="store reveal in" href="stores.html?store=${s.id}">
+      <div class="logo-tile">${logo(s)}</div>
+      <div class="meta"><b>${s.name}</b><small>${where(s)}</small></div>
+    </a>`).join('');
+
+  // today in hours table
+  document.querySelectorAll('#hoursTable tr[data-days]').forEach(tr => tr.classList.toggle('today', tr.dataset.days.split(',').map(Number).includes(st.day)));
+})();
+</script>
+</body>
+</html>
