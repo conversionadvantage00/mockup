@@ -637,3 +637,13 @@ body::before, body::after { display: none; }
   .banner::before { background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.55) 35%, rgba(0,0,0,.8)); }
   .hero-media::after { background: linear-gradient(180deg, rgba(0,0,0,0) 15%, rgba(0,0,0,.45) 45%, rgba(0,0,0,.78)); }
 }
+/* Mobile: full-screen, edge-to-edge hero (desktop unchanged) */
+@media (max-width: 1023px) {
+  .hero { padding-top: 0; }
+  .hero-media {
+    margin: 0 calc(var(--pad) * -1); border-radius: 0;
+    height: calc(100svh - var(--hdr) - 100px); min-height: 400px; max-height: none;
+  }
+  .hero-copy { padding: 24px var(--pad) 28px; }
+  .info-row { margin-top: 4px; }
+}
